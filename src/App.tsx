@@ -1,3 +1,5 @@
+import { Articles } from "./components/articles";
+import { Features } from "./components/features";
 import { Hero } from "./components/hero";
 import { Nav } from "./components/nav";
 
@@ -7,6 +9,8 @@ function App() {
 			<div className="">
 				<Nav />
 				<Hero />
+				<Features />
+				<Articles />
 			</div>
 		</>
 	);

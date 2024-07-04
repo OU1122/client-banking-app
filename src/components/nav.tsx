@@ -4,16 +4,17 @@ import { Button } from "./button";
 export const Nav = () => {
 	return (
 		<nav className="relative max-w-[1440px] mx-auto py-4 flex bg-White px-32 items-center justify-between z-50">
-			<div>
+			<div className="flex items-center">
 				<img
 					src="/logo.svg"
 					alt=""
 				/>
 			</div>
 			<div>
-				<ul className="text-GrayishBlue flex gap-4">
+				<ul className="text-GrayishBlue flex items-center jsutify-center gap-4">
 					{links.map((link, i) => (
 						<a
+							key={i}
 							href={link.hash}
 							className="">
 							<li
@@ -25,9 +26,8 @@ export const Nav = () => {
 					))}
 				</ul>
 			</div>
-			<div>
-				<Button type="button">Request Invite</Button>
-			</div>
+
+			<Button type="button">Request Invite</Button>
 		</nav>
 	);
 };
