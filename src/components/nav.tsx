@@ -4,10 +4,11 @@ import { Button } from "./button";
 export const Nav = () => {
 	return (
 		<nav className="relative max-w-[1440px] mx-auto py-4 flex bg-White px-32 items-center justify-between z-50">
-			<div className="flex items-center">
+			<div className="flex items-center min-w-[130px] ">
 				<img
+					className="w-full h-full"
 					src="/logo.svg"
-					alt=""
+					alt="logo"
 				/>
 			</div>
 			<div>
