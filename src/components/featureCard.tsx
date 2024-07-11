@@ -10,7 +10,7 @@ export const FeatureCard: React.FC<FeaturesProps> = ({
 	description,
 }) => {
 	return (
-		<div className=" p-4 gap-4 flex flex-col items-start justify-between">
+		<div className=" p-4 gap-4 flex flex-col items-center md:items-start justify-between">
 			<img src={img}></img>
 			<h2 className="text-DarkBlue text-2xl">{title}</h2>
 			<p className="text-GrayishBlue text-[18px]">{description}</p>
