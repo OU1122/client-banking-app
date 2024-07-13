@@ -40,7 +40,7 @@ export const Footer = () => {
 							/>
 						</div>
 					</div>
-					<div className="flex flex-1 px-8  items-center justify-center md:ml-8 ">
+					<div className="flex flex-1 px-8  justify-center md:ml-8 ">
 						<ul className="flex flex-col items-center md:items-start text-White gap-4 font-semibold *:cursor-pointer">
 							<li className="hover:text-LimeGreen">About Us</li>
 							<li className="hover:text-LimeGreen">Contact</li>

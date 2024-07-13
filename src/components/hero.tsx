@@ -3,16 +3,16 @@ import { Button } from "./button";
 export const Hero = () => {
 	return (
 		<section className="bg-VeryLightGray">
-			<div className="relative max-w-[1440px] mx-auto mt-4 flex flex-col px-8 md:px-18 lg:px-32 overflow-x-clip overflow-y-visible pb-4">
-				<div className=" relative md:hidden max-w-[400px] mx-auto">
+			<div className="relative max-w-[1440px] mx-auto mt-4 flex flex-col md:px-18 lg:px-32 overflow-x-clip overflow-y-visible pb-4">
+				<div className=" relative md:hidden max-w-[500px] mx-auto">
 					<img
 						className="w-full h-full object-contain"
 						src="/bg-intro-mobile.svg"></img>
 					<img
-						className=" absolute -top-28"
+						className=" absolute -top-36"
 						src="/image-mockups.png"></img>
 				</div>
-				<div className="gap-8 flex flex-col md:items-start items-center justify-center md:py-[100px] md:pl-4 md:w-[60%] ">
+				<div className="gap-8 -mt-10 md:mt-0 flex flex-col md:items-start items-center justify-center md:py-[100px] md:pl-4 md:w-[60%] px-8 md:px-0 ">
 					<h1 className="text-DarkBlue text-4xl md:w-3/4 text-center md:text-left">
 						Next generation digital banking
 					</h1>

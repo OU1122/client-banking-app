@@ -1,21 +1,33 @@
-import { Articles } from "./components/articles";
-import { Features } from "./components/features";
-import { Footer } from "./components/footer";
-import { Hero } from "./components/hero";
-import { Nav } from "./components/nav";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "./routes/layout";
+import HomePage from "./routes/homepage";
+import Login from "./routes/login";
+import Register from "./routes/register";
 
 function App() {
-	return (
-		<>
-			<div className="">
-				<Nav />
-				<Hero />
-				<Features />
-				<Articles />
-				<Footer />
-			</div>
-		</>
-	);
+	const router = createBrowserRouter([
+		{
+			path: "/",
+			element: <Layout />,
+			children: [
+				{
+					index: true,
+					element: <HomePage />,
+				},
+
+				{
+					path: "register",
+					element: <Register />,
+				},
+				{
+					path: "login",
+					element: <Login />,
+				},
+			],
+		},
+	]);
+
+	return <RouterProvider router={router} />;
 }
 
 export default App;
