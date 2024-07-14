@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../components/button";
 import { useForm } from "react-hook-form";
 
@@ -22,7 +23,11 @@ const Register: React.FC = () => {
 					className="grid grid-cols-2 gap-4"
 					onSubmit={handleSubmit(onSubmit)}>
 					<div className="flex flex-col gap-1">
-						<label htmlFor="firstName">First Name</label>
+						<label
+							htmlFor="firstName"
+							className="text-sm">
+							First Name
+						</label>
 						<input
 							{...register("firstName")}
 							className="border border-GrayishBlue rounded-lg p-2"
@@ -32,7 +37,11 @@ const Register: React.FC = () => {
 							placeholder="John"></input>
 					</div>
 					<div className="flex flex-col gap-1">
-						<label htmlFor="lastName">Last Name</label>
+						<label
+							htmlFor="lastName"
+							className="text-sm">
+							Last Name
+						</label>
 						<input
 							{...register("lastName")}
 							className="border border-GrayishBlue rounded-lg p-2"
@@ -42,7 +51,11 @@ const Register: React.FC = () => {
 							placeholder="Doe"></input>
 					</div>
 					<div className="flex flex-col col-span-2 gap-1">
-						<label htmlFor="streetNumber">Street Number</label>
+						<label
+							htmlFor="streetNumber"
+							className="text-sm">
+							Street Number
+						</label>
 						<input
 							{...register("streetNumber")}
 							className="border border-GrayishBlue rounded-lg p-2"
@@ -51,7 +64,11 @@ const Register: React.FC = () => {
 							placeholder="10 Downing Street"></input>
 					</div>
 					<div className="flex flex-col gap-1">
-						<label htmlFor="city">City</label>
+						<label
+							htmlFor="city"
+							className="text-sm">
+							City
+						</label>
 						<input
 							{...register("city")}
 							required
@@ -61,7 +78,11 @@ const Register: React.FC = () => {
 							placeholder="London"></input>
 					</div>
 					<div className="flex flex-col gap-1">
-						<label htmlFor="postCode">Post Code</label>
+						<label
+							htmlFor="postCode"
+							className="text-sm">
+							Post Code
+						</label>
 						<input
 							{...register("postCode")}
 							required
@@ -71,7 +92,11 @@ const Register: React.FC = () => {
 							placeholder="WC1 8PP"></input>
 					</div>
 					<div className="flex flex-col col-span-2 gap-1">
-						<label htmlFor="email">E-mail</label>
+						<label
+							htmlFor="email"
+							className="text-sm">
+							E-mail
+						</label>
 						<input
 							{...register("email")}
 							required
@@ -81,7 +106,12 @@ const Register: React.FC = () => {
 							placeholder="Enter your email"></input>
 					</div>
 					<div className="flex flex-col col-span-2 gap-1">
-						<label htmlFor="password"> Password</label>
+						<label
+							htmlFor="password"
+							className="text-sm">
+							{" "}
+							Password
+						</label>
 						<input
 							{...register("password")}
 							required
@@ -90,10 +120,20 @@ const Register: React.FC = () => {
 							type="password"
 							placeholder="Enter your password"></input>
 					</div>
+					<div className="flex items-center justify-center col-span-2 mt-4">
+						<Button
+							type="submit"
+							width="w-full">
+							Sign up
+						</Button>
+					</div>
 				</form>
-				<div className="flex items-center justify-center">
-					<Button type="button">Sign up</Button>
-				</div>
+				<p className="text-center">
+					Already have an account?{" "}
+					<Link to="/login">
+						<span className="text-LimeGreen">Login</span>
+					</Link>
+				</p>
 			</div>
 
 			<div className="relative right w-1/2 h-full bg-LightGrayishBlue overflow-hidden">

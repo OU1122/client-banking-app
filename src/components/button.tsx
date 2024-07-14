@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 
 type ButtonProps = {
-	type: "button";
+	type: "button" | "submit";
 	children: React.ReactNode;
 	link?: string;
+	width?: "w-full";
 };
 
-export const Button: React.FC<ButtonProps> = ({ type, link, children }) => {
+export const Button: React.FC<ButtonProps> = ({
+	type,
+	link,
+	children,
+	width,
+}) => {
 	if (link) {
 		return (
 			<div className="min-w-fit">
@@ -17,6 +23,18 @@ export const Button: React.FC<ButtonProps> = ({ type, link, children }) => {
 						{children}
 					</button>
 				</Link>
+			</div>
+		);
+	}
+
+	if (width) {
+		return (
+			<div className={width}>
+				<button
+					className={`text-White rounded-3xl bg-gradient-to-r from-LimeGreen to-BrightCyan px-6 py-2 hover:opacity-85 ${width}`}
+					type={type}>
+					{children}
+				</button>
 			</div>
 		);
 	}
