@@ -2,6 +2,7 @@ import { useState } from "react";
 import { links } from "../library/data";
 import { Button } from "./button";
 import { Fade as Hamburger } from "hamburger-react";
+import { Link } from "react-router-dom";
 
 export const Nav = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,14 @@ export const Nav = () => {
 	return (
 		<nav className="relative max-w-[1440px] h-[72px] mx-auto py-4 flex bg-White px-4 sm:px-16 lg:px-32 items-center justify-between z-50 gap-2">
 			<div className="flex items-center min-w-[130px]">
-				<img
-					className="w-full h-full"
-					src="/logo.svg"
-					alt="logo"
-				/>
+				<Link to="/">
+					{" "}
+					<img
+						className="w-full h-full"
+						src="/logo.svg"
+						alt="logo"
+					/>
+				</Link>
 			</div>
 			<div>
 				<ul className="text-GrayishBlue hidden  md:flex items-center jsutify-center gap-4 md:gap-4">
@@ -32,7 +36,11 @@ export const Nav = () => {
 				</ul>
 			</div>
 			<div className="hidden md:block">
-				<Button type="button">Request Invite</Button>
+				<Button
+					type="button"
+					link="/register">
+					Try for Free
+				</Button>
 			</div>
 			<div className="block md:hidden">
 				<Hamburger

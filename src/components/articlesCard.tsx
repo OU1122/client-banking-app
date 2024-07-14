@@ -12,7 +12,7 @@ export const ArticleCard: React.FC<FeaturesProps> = ({
 	author,
 }) => {
 	return (
-		<div className="gap-4 flex flex-col bg-White rounded-md">
+		<div className="gap-4 flex flex-col bg-White rounded-md max-w-[350px]">
 			<div className="w-full h-[200px] rounded-t-lg">
 				<img
 					className="w-full h-full object-cover rounded-t-lg"
