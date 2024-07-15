@@ -21,10 +21,10 @@ export const ArticleCard: React.FC<FeaturesProps> = ({
 			</div>
 			<div className="flex flex-col overflow-ellipsis p-4 gap-4 items-start justify-center">
 				<p className="text-xs text-GrayishBlue font-semibold">{author}</p>
-				<h2 className="text-DarkBlue text-2xl hover:text-LimeGreen hover:cursor-pointer">
+				<h2 className="text-DarkBlue text-xl hover:text-LimeGreen hover:cursor-pointer">
 					{title}
 				</h2>
-				<p className="overflow-ellipsis text-GrayishBlue text-[18px]">
+				<p className="overflow-ellipsis text-GrayishBlue text-[16px]">
 					{description}
 				</p>
 			</div>
