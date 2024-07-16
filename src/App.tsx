@@ -3,6 +3,7 @@ import { Layout } from "./routes/layout";
 import HomePage from "./routes/homepage";
 import Login from "./routes/login";
 import Register from "./routes/register";
+import Test from "./routes/test";
 
 function App() {
 	const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
 				{
 					path: "login",
 					element: <Login />,
+				},
+				{
+					path: "test",
+					element: <Test />,
 				},
 			],
 		},
