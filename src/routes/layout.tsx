@@ -9,4 +9,12 @@ const Layout: React.FC = () => {
 		</>
 	);
 };
-export { Layout };
+const AppLayout: React.FC = () => {
+	return (
+		<>
+			<Outlet />
+		</>
+	);
+};
+
+export { Layout, AppLayout };
