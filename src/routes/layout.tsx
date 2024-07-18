@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Nav } from "../components/nav";
+import { AppSidebar } from "../components/appSidebar";
 
 const Layout: React.FC = () => {
 	return (
@@ -12,7 +13,10 @@ const Layout: React.FC = () => {
 const AppLayout: React.FC = () => {
 	return (
 		<>
-			<Outlet />
+			<div className=" max-w-[1440px] flex mx-auto">
+				<AppSidebar />
+				<Outlet />
+			</div>
 		</>
 	);
 };
