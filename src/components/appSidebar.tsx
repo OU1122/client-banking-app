@@ -17,59 +17,60 @@ export const AppSidebar = () => {
 					src="/logo.svg"></img>
 			</div>
 			<div className="flex flex-col gap-2 mt-8 *:text-GrayishBlue *:text-[18px]">
-				<div className="flex items-center py-3">
+				<div className="relative flex items-center py-3">
+					<div className="absolute top-0 left-0 bg-LimeGreen h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[35px]"></div>
 					<IoMdHome
-						color=""
-						size={35}
+						color="LimeGreen"
+						size={30}
 					/>
-					<p className="pl-4">Home</p>
+					<p className="pl-4 text-LimeGreen">Home</p>
 				</div>
 				<div className="flex items-center py-3">
 					<GrTransaction
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Transactions</p>
 				</div>
 				<div className="flex items-center py-3">
 					<MdAccountBalanceWallet
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Accounts</p>
 				</div>
 				<div className="flex items-center py-3">
 					<AiOutlineStock
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Investments</p>
 				</div>
 				<div className="flex items-center py-3">
 					<FaCreditCard
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Credit Cards</p>
 				</div>
 				<div className="flex items-center py-3">
 					<FaHandHoldingUsd
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Loans</p>
 				</div>
 				<div className="flex items-center py-3">
 					<MdOutlineDesignServices
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Services</p>
 				</div>
 				<div className="flex items-center py-3">
 					<IoSettingsOutline
 						color=""
-						size={35}
+						size={30}
 					/>
 					<p className="pl-4">Settings</p>
 				</div>
