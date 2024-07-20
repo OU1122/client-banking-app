@@ -7,73 +7,187 @@ import {
 	MdAccountBalanceWallet,
 	MdOutlineDesignServices,
 } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 export const AppSidebar = () => {
 	return (
-		<div className="sidebar h-screen px-8 pt-8 ">
-			<div className="w-[200px]">
+		<div className="sidebar h-screen px-4 pt-8 border-r-1 border border-LightGrayishBlue flex flex-col items-center">
+			<div className="w-[180px]">
 				<img
 					className="w-full h-full"
 					src="/logo.svg"></img>
 			</div>
 			<div className="flex flex-col gap-2 mt-8 *:text-GrayishBlue *:text-[18px]">
-				<div className="relative flex items-center py-3">
-					<div className="absolute top-0 left-0 bg-LimeGreen h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[35px]"></div>
-					<IoMdHome
-						color="LimeGreen"
-						size={30}
-					/>
-					<p className="pl-4 text-LimeGreen">Home</p>
-				</div>
-				<div className="flex items-center py-3">
-					<GrTransaction
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Transactions</p>
-				</div>
-				<div className="flex items-center py-3">
-					<MdAccountBalanceWallet
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Accounts</p>
-				</div>
-				<div className="flex items-center py-3">
-					<AiOutlineStock
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Investments</p>
-				</div>
-				<div className="flex items-center py-3">
-					<FaCreditCard
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Credit Cards</p>
-				</div>
-				<div className="flex items-center py-3">
-					<FaHandHoldingUsd
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Loans</p>
-				</div>
-				<div className="flex items-center py-3">
-					<MdOutlineDesignServices
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Services</p>
-				</div>
-				<div className="flex items-center py-3">
-					<IoSettingsOutline
-						color=""
-						size={30}
-					/>
-					<p className="pl-4">Settings</p>
-				</div>
+				<NavLink to="/app">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<IoMdHome
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Home
+							</p>
+						</div>
+					)}
+				</NavLink>
+				<NavLink to="/transactions">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<GrTransaction
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Transactions
+							</p>
+						</div>
+					)}
+				</NavLink>
+				<NavLink to="/accounts">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<MdAccountBalanceWallet
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Accounts
+							</p>
+						</div>
+					)}
+				</NavLink>
+				<NavLink to="/investments">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<AiOutlineStock
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Investments
+							</p>
+						</div>
+					)}
+				</NavLink>
+				<NavLink to="/credit-cards">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<FaCreditCard
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Credit Cards
+							</p>
+						</div>
+					)}
+				</NavLink>
+				<NavLink to="/loans">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<FaHandHoldingUsd
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Loans
+							</p>
+						</div>
+					)}
+				</NavLink>
+
+				<NavLink to="/services">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<MdOutlineDesignServices
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Services
+							</p>
+						</div>
+					)}
+				</NavLink>
+
+				<NavLink to="/settings">
+					{({ isActive }) => (
+						<div className=" relative flex items-center py-3 ">
+							{" "}
+							<div
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+									isActive ? `block` : `hidden`
+								}`}></div>
+							<IoSettingsOutline
+								color={isActive ? "#31d35c" : "#9698a6"}
+								size={25}
+							/>
+							<p
+								className={`pl-4  ${
+									isActive ? `text-LimeGreen` : `text-GrayishBlue`
+								}`}>
+								Settings
+							</p>
+						</div>
+					)}
+				</NavLink>
 			</div>
 		</div>
 	);

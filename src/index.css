@@ -29,3 +29,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+.icon-active {
+	color: LimeGreen;
+}
+
+.icon-inactive {
+	color: gray;
+}

@@ -6,6 +6,7 @@ import Register from "./routes/register";
 import Test from "./routes/test";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppHomepage from "./routes/appHomepage";
+import AppTransactions from "./routes/appTransactions";
 function App() {
 	const queryClient = new QueryClient();
 
@@ -34,12 +35,17 @@ function App() {
 			],
 		},
 		{
-			path: "/app",
+			path: "/",
 			element: <AppLayout />,
 			children: [
 				{
+					path: "/app",
 					element: <AppHomepage />,
 					index: true,
+				},
+				{
+					path: "/transactions",
+					element: <AppTransactions />,
 				},
 			],
 		},
