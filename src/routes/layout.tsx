@@ -15,6 +15,7 @@ const AppLayout: React.FC = () => {
 		<>
 			<div className=" max-w-[1440px] flex mx-auto">
 				<AppSidebar />
+
 				<Outlet />
 			</div>
 		</>

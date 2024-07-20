@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 
 export const AppSidebar = () => {
 	return (
-		<div className="sidebar h-screen px-4 pt-8 border-r-1 border border-LightGrayishBlue flex flex-col items-center">
+		<div className="sidebar h-screen px-4 pt-8  border-r-[1px] border-LightGrayishBlue flex flex-col items-center">
 			<div className="w-[180px]">
 				<img
 					className="w-full h-full"
