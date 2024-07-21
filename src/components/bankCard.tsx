@@ -13,10 +13,10 @@ export const BankCard: React.FC<BankCardProps> = ({
 }) => {
 	return (
 		<div
-			className={`max-w-[350px] max-h-[235px] rounded-3xl p-6 flex-grow border border-LimeGreen ${
+			className={`max-w-[350px] shadow-lg max-h-[235px] rounded-3xl p-6 flex-grow border border-LimeGreen ${
 				!isFirstCard
 					? `bg-gradient-to-r from-LimeGreen to-BrightCyan `
-					: `bg-LightGrayishBlue`
+					: `bg-White`
 			}`}>
 			<div
 				className={`flex flex-col gap-4 ${
