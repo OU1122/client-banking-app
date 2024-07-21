@@ -85,7 +85,7 @@ export const creditCards = [
 		name: "Eddy Cusuma",
 		validThruMonth: 12,
 		validThruYear: 24,
-		cardNumber: 1212323254312310,
+		cardNumber: 8421323254312310,
 		brand: "mastercard",
 	},
 	{
@@ -93,7 +93,28 @@ export const creditCards = [
 		name: "Eddy Cusuma",
 		validThruMonth: 7,
 		validThruYear: 27,
-		cardNumber: 1212323254312310,
+		cardNumber: 9274323254312310,
 		brand: "mastercard",
+	},
+] as const;
+
+export const recentTransactions = [
+	{
+		type: "deposit",
+		description: "Deposit from my Card",
+		date: "28 January 2023",
+		amount: -850,
+	},
+	{
+		type: "PayPal",
+		description: "Deposit PayPal",
+		date: "10 January 2023",
+		amount: 2500,
+	},
+	{
+		type: "payment",
+		description: "Deposit PayPal",
+		date: "1 January 2023",
+		amount: 5400,
 	},
 ] as const;

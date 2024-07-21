@@ -1,3 +1,5 @@
+import { formatCardNumber } from "../library/fromatCardNumber";
+import { numberFormatter } from "../library/numberFormatter";
 import { BankCardProps } from "../library/types";
 
 export const BankCard: React.FC<BankCardProps> = ({
@@ -22,35 +24,43 @@ export const BankCard: React.FC<BankCardProps> = ({
 				}`}>
 				<div className="flex items-center justify-between">
 					<div className="flex flex-col">
-						<p className="">Balance</p>
-						<p>{balance}</p>
+						<p className="text-sm">Balance</p>
+						<p className="font-semibold">
+							{numberFormatter.format(balance)}
+						</p>
 					</div>
 					<div className="w-8 h-8">
 						<img
 							className="w-full h-full object-cover"
-							src="/chip-card.png"></img>
+							src={`${
+								!isFirstCard
+									? `/chip-card-white.png`
+									: `/chip-card-blk.svg`
+							}`}></img>
 					</div>
 				</div>
 				<div className="flex items-center justify-between w-[80%]">
 					<div>
-						<p>CARD HOLDER</p>
-						<p>{name}</p>
+						<p className="text-xs">CARD HOLDER</p>
+						<p className="font-semibold">{name}</p>
 					</div>
 					<div>
-						<p> VALID THRU</p>
-						<p>
+						<p className="text-xs"> VALID THRU</p>
+						<p className="font-semibold">
 							{validThruMonth}/{validThruYear}
 						</p>
 					</div>
 				</div>
 				<div className="">
 					<div className="flex items-center justify-between">
-						<p>{cardNumber}</p>
+						<p className="text-xl">{formatCardNumber(cardNumber)}</p>
 
 						<img
 							className=""
 							src={`${
-								brand === "mastercard" ? "/mastercard.png" : ""
+								!isFirstCard
+									? `/mastercard-white.svg`
+									: `/mastercard-dark.svg`
 							}`}></img>
 					</div>
 				</div>
