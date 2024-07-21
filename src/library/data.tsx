@@ -78,3 +78,22 @@ export const articles = [
 			"After a lot of hard work by the whole team, we are excited to launch our closed beta. Just sign up via site...",
 	},
 ] as const;
+
+export const creditCards = [
+	{
+		balance: 20000,
+		name: "Eddy Cusuma",
+		validThruMonth: 12,
+		validThruYear: 24,
+		cardNumber: 1212323254312310,
+		brand: "mastercard",
+	},
+	{
+		balance: 5800,
+		name: "Eddy Cusuma",
+		validThruMonth: 7,
+		validThruYear: 27,
+		cardNumber: 1212323254312310,
+		brand: "mastercard",
+	},
+] as const;

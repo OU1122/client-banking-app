@@ -4,7 +4,7 @@ import { IoIosSearch } from "react-icons/io";
 
 export const AppTopbar = ({ appHeading }: { appHeading?: string }) => {
 	return (
-		<div className="topbar py-4">
+		<div className="topbar pb-4">
 			<div className=" flex flex-row justify-between items-center px-8">
 				<h2 className="font-semibold text-2xl tracking-wide text-DarkBlue">
 					{appHeading || "Overview"}

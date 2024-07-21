@@ -1,9 +1,4 @@
-type FeaturesProps = {
-	img: string;
-	title: string;
-	description: string;
-	author: string;
-};
+import { FeaturesProps } from "../library/types";
 
 export const ArticleCard: React.FC<FeaturesProps> = ({
 	img,
