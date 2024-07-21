@@ -1,3 +1,5 @@
+import { ReactNode, ReactSVGElement } from "react";
+
 export type BankCardProps = {
 	balance: number;
 	name: string;
@@ -13,4 +15,12 @@ export type FeaturesProps = {
 	title: string;
 	description: string;
 	author: string;
+};
+
+export type AppRecentTransactionsProps = {
+	type: "deposit" | "paypal" | "payment";
+	description: string;
+	date: string;
+	amount: number;
+	icon: ReactNode;
 };

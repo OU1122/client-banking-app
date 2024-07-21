@@ -1,3 +1,5 @@
+import { FaPaypal } from "react-icons/fa";
+
 export const links = [
 	{
 		name: "Home",
@@ -104,17 +106,20 @@ export const recentTransactions = [
 		description: "Deposit from my Card",
 		date: "28 January 2023",
 		amount: -850,
+		icon: <FaPaypal />,
 	},
 	{
-		type: "PayPal",
+		type: "paypal",
 		description: "Deposit PayPal",
 		date: "10 January 2023",
 		amount: 2500,
+		icon: <FaPaypal />,
 	},
 	{
 		type: "payment",
 		description: "Deposit PayPal",
 		date: "1 January 2023",
 		amount: 5400,
+		icon: <FaPaypal />,
 	},
 ] as const;
