@@ -13,13 +13,13 @@ export const BankCard: React.FC<BankCardProps> = ({
 }) => {
 	return (
 		<div
-			className={`max-w-[350px] shadow-lg max-h-[235px] rounded-3xl p-6 flex-grow border border-LimeGreen ${
+			className={`max-w-[350px] flex shadow-md rounded-3xl p-6 flex-grow border border-LimeGreen ${
 				!isFirstCard
 					? `bg-gradient-to-r from-LimeGreen to-BrightCyan `
 					: `bg-White`
 			}`}>
 			<div
-				className={`flex flex-col gap-4 ${
+				className={`flex flex-col gap-4 flex-1 justify-evenly ${
 					!isFirstCard ? `text-White` : `text-DarkBlue`
 				}`}>
 				<div className="flex items-center justify-between">
