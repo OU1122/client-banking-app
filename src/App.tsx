@@ -51,12 +51,7 @@ function App() {
 		},
 	]);
 
-	return (
-		<QueryClientProvider client={queryClient}>
-			{" "}
-			<RouterProvider router={router} />{" "}
-		</QueryClientProvider>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;
