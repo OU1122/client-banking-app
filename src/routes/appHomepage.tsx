@@ -46,8 +46,11 @@ export default function AppHomepage() {
 						</div>
 					</div>
 				</div>
-				<div className="mid-section">
+				<div className="mid-section mt-6">
 					<div className="px-10">
+						<h2 className="text-DarkBlue text-[22px] font-semibold">
+							Weekly Activity
+						</h2>
 						<AppWeeklyActivity />
 					</div>
 				</div>

@@ -60,9 +60,6 @@ export const AppWeeklyActivity: React.FC = () => {
 
 	return (
 		<div className="">
-			<div>
-				<h2>Weekly Expenses</h2>
-			</div>
 			<div className="max-w-[730px] max-h-[322px]">
 				<Bar
 					data={data}
