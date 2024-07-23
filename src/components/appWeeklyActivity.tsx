@@ -35,11 +35,17 @@ export const AppWeeklyActivity: React.FC = () => {
 				label: "Income",
 				data: [65, 59, 80, 81, 56, 55, 40],
 				backgroundColor: "rgba(75, 192, 192, 0.6)",
+				barThickness: 15,
+				borderRadius: 15,
+				borderSkipped: false,
 			},
 			{
 				label: "Expenses",
 				data: [45, 50, 60, 70, 40, 50, 35],
 				backgroundColor: "rgba(255, 99, 132, 0.6)",
+				barThickness: 15,
+				borderRadius: 15,
+				borderSkipped: false,
 			},
 		],
 	};
@@ -54,13 +60,16 @@ export const AppWeeklyActivity: React.FC = () => {
 		},
 		scales: {
 			x: { stacked: false },
-			y: { stacked: false },
+			y: { stacked: false, beginAtZero: true },
+		},
+		layout: {
+			padding: 20,
 		},
 	};
 
 	return (
 		<div className="">
-			<div className="max-w-[730px] max-h-[322px]">
+			<div className="max-w-[730px] max-h-[322px] bg-White rounded-3xl flex justify-center">
 				<Bar
 					data={data}
 					options={options}

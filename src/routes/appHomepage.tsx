@@ -47,7 +47,7 @@ export default function AppHomepage() {
 					</div>
 				</div>
 				<div className="mid-section mt-6">
-					<div className="px-10">
+					<div className="px-10 flex flex-col gap-6">
 						<h2 className="text-DarkBlue text-[22px] font-semibold">
 							Weekly Activity
 						</h2>
