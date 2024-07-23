@@ -1,5 +1,6 @@
 import { AppRecentTransactions } from "../components/appRecentTransactions";
 import { AppTopbar } from "../components/appTopbar";
+import { AppWeeklyActivity } from "../components/appWeeklyActivity";
 import { BankCard } from "../components/bankCard";
 import { creditCards as cards } from "../library/data";
 import { recentTransactions } from "../library/data";
@@ -45,7 +46,11 @@ export default function AppHomepage() {
 						</div>
 					</div>
 				</div>
-				<div className="mid-section"></div>
+				<div className="mid-section">
+					<div className="px-10">
+						<AppWeeklyActivity />
+					</div>
+				</div>
 				<div className="bottom-section"></div>
 			</main>
 		</div>
