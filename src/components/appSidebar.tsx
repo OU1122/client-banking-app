@@ -23,7 +23,7 @@ export const AppSidebar = () => {
 						<div className=" relative flex items-center py-3 ">
 							{" "}
 							<div
-								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
+								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-gradient-to-t from-LimeGreen to-BrightCyan ${
 									isActive ? `block` : `hidden`
 								}`}></div>
 							<IoMdHome
