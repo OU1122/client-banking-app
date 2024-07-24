@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Person } from "../../library/types";
 import { AppQuickTransferPerson } from "./appQuickTransferPerson";
+import { GrSend } from "react-icons/gr";
 
 const persons: Person[] = [
 	{
@@ -11,7 +12,7 @@ const persons: Person[] = [
 	{
 		image: "/profile-pic.jpg",
 		name: "Doe",
-		description: "Marketing Manager",
+		description: "Manager",
 	},
 	{
 		image: "/profile-pic.jpg",
@@ -38,16 +39,15 @@ export const AppQuickTransfer: React.FC = () => {
 		startIndex + visibleCards
 	);
 
-	// If the slice wraps around, include items from the beginning of the list
 	if (displayedPersons.length < visibleCards) {
 		displayedPersons.push(
 			...persons.slice(0, visibleCards - displayedPersons.length)
 		);
 	}
-	console.log(displayedPersons);
+
 	return (
-		<div className="flex gap-6 items-center flex-col">
-			<div className="flex flex-row gap-2">
+		<div className="flex gap-3  flex-col bg-White rounded-3xl shadow-md p-4">
+			<div className="flex flex-row gap-2 items-start">
 				{" "}
 				{displayedPersons.map((person, i) => (
 					<AppQuickTransferPerson
@@ -59,14 +59,22 @@ export const AppQuickTransfer: React.FC = () => {
 					<span onClick={handleClick}>X</span>
 				</div>
 			</div>
-			<div className="flex flex-row gap-2">
-				<p className="">Amount to send</p>
-				<form>
+			<div className="flex flex-row gap-2 pr-2 items-center">
+				<p className="min-w-fit px-2">Amount</p>
+				<form className="flex flex-row  ">
 					<input
+						className="bg-LightGrayishBlue rounded-full py-2 pl-4"
 						type="number"
 						placeholder="20"
 					/>
-					<button type="button">Send</button>
+					<button
+						type="button"
+						className="bg-LimeGreen pl-8 pr-10 rounded-full text-White -translate-x-16 relative">
+						Send
+						<span className="absolute top-[13px] right-3">
+							<GrSend />
+						</span>
+					</button>
 				</form>
 			</div>
 		</div>
