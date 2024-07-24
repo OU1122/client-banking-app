@@ -63,7 +63,7 @@ export default function AppHomepage() {
 					</div>
 				</div>
 				<div className="bottom-section">
-					<div className="px-10 flex flex-col gap-3 flex-1 mt-3">
+					<div className="px-10 flex flex-col gap-3 flex-1 mt-3 max-w-[445px] border-2 border-DarkBlue">
 						<h2 className="text-DarkBlue text-[22px] font-semibold ">
 							Quick Transfer
 						</h2>

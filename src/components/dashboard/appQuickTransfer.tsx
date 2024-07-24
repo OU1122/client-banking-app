@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Person } from "../../library/types";
 import { AppQuickTransferPerson } from "./appQuickTransferPerson";
 
@@ -10,33 +11,55 @@ const persons: Person[] = [
 	{
 		image: "/profile-pic.jpg",
 		name: "Doe",
-		description: "CEO",
+		description: "Marketing Manager",
 	},
 	{
 		image: "/profile-pic.jpg",
-		name: "Doe",
-		description: "CEO",
+		name: "Moe",
+		description: "Director",
 	},
 	{
 		image: "/profile-pic.jpg",
-		name: "Doe",
-		description: "CEO",
+		name: "Roe",
+		description: "CFO",
 	},
 ];
 
 export const AppQuickTransfer: React.FC = () => {
+	const [startIndex, setStartIndex] = useState(0);
+	const visibleCards = 3;
+
+	const handleClick = () => {
+		setStartIndex((prevIndex) => (prevIndex + 1) % persons.length);
+	};
+
+	const displayedPersons = persons.slice(
+		startIndex,
+		startIndex + visibleCards
+	);
+
+	// If the slice wraps around, include items from the beginning of the list
+	if (displayedPersons.length < visibleCards) {
+		displayedPersons.push(
+			...persons.slice(0, visibleCards - displayedPersons.length)
+		);
+	}
+	console.log(displayedPersons);
 	return (
 		<div className="flex gap-6 items-center flex-col">
 			<div className="flex flex-row gap-2">
 				{" "}
-				{persons.map((person, i) => (
+				{displayedPersons.map((person, i) => (
 					<AppQuickTransferPerson
 						key={i}
 						person={person}
 					/>
 				))}
+				<div className="flex items-center justify-center">
+					<span onClick={handleClick}>X</span>
+				</div>
 			</div>
-			<div className="flex flex-col gap-2">
+			<div className="flex flex-row gap-2">
 				<p className="">Amount to send</p>
 				<form>
 					<input
