@@ -1,4 +1,4 @@
-import { ReactNode, ReactSVGElement } from "react";
+import { ReactNode } from "react";
 
 export type BankCardProps = {
 	balance: number;
@@ -23,4 +23,14 @@ export type AppRecentTransactionsProps = {
 	date: string;
 	amount: number;
 	icon: ReactNode;
+};
+
+export type AppQuickTransferProps = {
+	person: Person;
+};
+
+export type Person = {
+	image: string;
+	name: string;
+	description: string;
 };

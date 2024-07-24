@@ -1,17 +1,19 @@
-import { AppRecentTransactions } from "../components/appRecentTransactions";
+import { AppExpenseStatistics } from "../components/dashboard/appExpenseStatistics";
+import { AppRecentTransactions } from "../components/dashboard/appRecentTransactions";
 import { AppTopbar } from "../components/appTopbar";
-import { AppWeeklyActivity } from "../components/appWeeklyActivity";
-import { BankCard } from "../components/bankCard";
+import { AppWeeklyActivity } from "../components/dashboard/appWeeklyActivity";
+import { BankCard } from "../components/dashboard/bankCard";
 import { creditCards as cards } from "../library/data";
 import { recentTransactions } from "../library/data";
+import { AppQuickTransfer } from "../components/dashboard/appQuickTransfer";
 
 export default function AppHomepage() {
 	return (
 		<div className="flex flex-col w-full pt-4">
 			<AppTopbar />
-			<main className="bg-VeryLightGray h-full pt-6">
-				<div className="top-section flex flex-row">
-					<div className="flex flex-col gap-6 flex-1 px-10  max-w-[820px] max-h-[282px]">
+			<main className="bg-AppBackground h-full pt-6">
+				<div className="top-section flex flex-row items-center justify-evenly">
+					<div className="flex flex-col flex-[2_1_0] gap-3 px-10  max-h-[282px]">
 						<div className="flex flex-row items-center justify-between">
 							<h2 className="text-DarkBlue text-[22px] font-semibold">
 								My Cards
@@ -30,7 +32,7 @@ export default function AppHomepage() {
 							))}
 						</div>
 					</div>
-					<div className=" px-5 flex flex-col gap-6">
+					<div className=" px-10 flex flex-col gap-3  flex-1">
 						<div>
 							<h2 className="text-DarkBlue text-[22px] font-semibold">
 								Recent Transactions
@@ -46,15 +48,28 @@ export default function AppHomepage() {
 						</div>
 					</div>
 				</div>
-				<div className="mid-section mt-6">
-					<div className="px-10 flex flex-col gap-6">
-						<h2 className="text-DarkBlue text-[22px] font-semibold">
+				<div className="mid-section mt-3 flex items-center justify-evenly">
+					<div className="px-10 flex flex-col gap-3 flex-[2_1_0]">
+						<h2 className="text-DarkBlue text-[22px] font-semibold ">
 							Weekly Activity
 						</h2>
 						<AppWeeklyActivity />
 					</div>
+					<div className="px-10 flex flex-col gap-3 flex-1">
+						<h2 className="text-DarkBlue text-[22px] font-semibold ">
+							Expense Statistics
+						</h2>
+						<AppExpenseStatistics />
+					</div>
 				</div>
-				<div className="bottom-section"></div>
+				<div className="bottom-section">
+					<div className="px-10 flex flex-col gap-3 flex-1 mt-3">
+						<h2 className="text-DarkBlue text-[22px] font-semibold ">
+							Quick Transfer
+						</h2>
+						<AppQuickTransfer />
+					</div>
+				</div>
 			</main>
 		</div>
 	);

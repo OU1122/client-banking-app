@@ -1,6 +1,6 @@
-import { formatCardNumber } from "../library/fromatCardNumber";
-import { numberFormatter } from "../library/numberFormatter";
-import { BankCardProps } from "../library/types";
+import { formatCardNumber } from "../../library/fromatCardNumber";
+import { numberFormatter } from "../../library/numberFormatter";
+import { BankCardProps } from "../../library/types";
 
 export const BankCard: React.FC<BankCardProps> = ({
 	balance,
@@ -8,12 +8,12 @@ export const BankCard: React.FC<BankCardProps> = ({
 	validThruMonth,
 	validThruYear,
 	cardNumber,
-	brand,
+
 	isFirstCard,
 }) => {
 	return (
 		<div
-			className={`max-w-[350px] flex shadow-md rounded-3xl p-6 flex-grow border border-LimeGreen ${
+			className={`max-w-[350px] flex shadow-md rounded-3xl p-6 flex-grow   ${
 				!isFirstCard
 					? `bg-gradient-to-r from-LimeGreen to-BrightCyan `
 					: `bg-White`

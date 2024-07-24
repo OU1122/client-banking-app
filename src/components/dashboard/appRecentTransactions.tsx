@@ -1,8 +1,7 @@
-import { numberFormatter } from "../library/numberFormatter";
-import { AppRecentTransactionsProps } from "../library/types";
+import { numberFormatter } from "../../library/numberFormatter";
+import { AppRecentTransactionsProps } from "../../library/types";
 
 export const AppRecentTransactions: React.FC<AppRecentTransactionsProps> = ({
-	type,
 	description,
 	date,
 	amount,
