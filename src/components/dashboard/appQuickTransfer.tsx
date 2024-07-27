@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Person } from "../../library/types";
 import { AppQuickTransferPerson } from "./appQuickTransferPerson";
 import { GrSend } from "react-icons/gr";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const persons: Person[] = [
 	{
@@ -55,8 +56,12 @@ export const AppQuickTransfer: React.FC = () => {
 						person={person}
 					/>
 				))}
-				<div className="flex items-center justify-center">
-					<span onClick={handleClick}>X</span>
+				<div className="flex items-center justify-center self-center">
+					<div
+						className="p-2 rounded-full shadow-lg"
+						onClick={handleClick}>
+						<MdKeyboardArrowRight size={24} />{" "}
+					</div>
 				</div>
 			</div>
 			<div className="flex flex-row gap-2 pr-2 items-center">
