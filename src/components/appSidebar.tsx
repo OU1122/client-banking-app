@@ -7,15 +7,18 @@ import {
 	MdAccountBalanceWallet,
 	MdOutlineDesignServices,
 } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const AppSidebar = () => {
 	return (
 		<div className="sidebar h-screen px-4 pt-8  border-r-[1px] border-LightGrayishBlue flex flex-col items-center">
+			{" "}
 			<div className="w-[180px]">
-				<img
-					className="w-full h-full"
-					src="/logo.svg"></img>
+				<Link to={"/"}>
+					<img
+						className="w-full h-full"
+						src="/logo.svg"></img>
+				</Link>
 			</div>
 			<div className="flex flex-col gap-2 mt-8 *:text-GrayishBlue *:text-[18px]">
 				<NavLink to="/app">
