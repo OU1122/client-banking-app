@@ -58,7 +58,7 @@ export const AppQuickTransfer: React.FC = () => {
 				))}
 				<div className="flex items-center justify-center self-center">
 					<div
-						className="p-2 rounded-full shadow-lg"
+						className="p-2 rounded-full shadow-lg hover:-translate-y-[4px] transition-all ease-in"
 						onClick={handleClick}>
 						<MdKeyboardArrowRight size={24} />{" "}
 					</div>
@@ -74,7 +74,7 @@ export const AppQuickTransfer: React.FC = () => {
 					/>
 					<button
 						type="button"
-						className="bg-LimeGreen pl-8 pr-10 rounded-full text-White -translate-x-16 relative">
+						className="bg-LimeGreen pl-8 pr-10 rounded-full text-White -translate-x-16 relative ">
 						Send
 						<span className="absolute top-[13px] right-3">
 							<GrSend />
