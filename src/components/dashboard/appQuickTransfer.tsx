@@ -47,7 +47,7 @@ export const AppQuickTransfer: React.FC = () => {
 	}
 
 	return (
-		<div className="flex gap-3  flex-col bg-White rounded-3xl shadow-md p-4">
+		<div className="flex gap-3  flex-col bg-White rounded-3xl shadow-md p-4 flex-grow justify-center max-w-[445px]">
 			<div className="flex flex-row gap-2 items-start">
 				{" "}
 				{displayedPersons.map((person, i) => (
@@ -64,11 +64,11 @@ export const AppQuickTransfer: React.FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-row gap-2 pr-2 items-center">
-				<p className="min-w-fit px-2">Amount</p>
-				<form className="flex flex-row  ">
+			<div className="flex flex-row gap-4 items-center">
+				<p className="min-w-fit px-4">Amount</p>
+				<form className="flex flex-row max-w-[265px] ">
 					<input
-						className="bg-LightGrayishBlue rounded-full py-2 pl-4"
+						className="bg-LightGrayishBlue rounded-full py-2 pl-4 "
 						type="number"
 						placeholder="20"
 					/>
