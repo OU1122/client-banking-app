@@ -61,7 +61,7 @@ export const AppBalanceHistory: React.FC = () => {
 	};
 
 	return (
-		<div className="w-full max-h-[276px] bg-White rounded-3xl flex justify-center p-4">
+		<div className="w-full max-h-[276px] bg-White rounded-3xl flex justify-center p-4 shadow-md">
 			<Line
 				data={data}
 				options={options}
