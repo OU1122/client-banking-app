@@ -38,7 +38,6 @@ export const AppQuickTransfer: React.FC = () => {
 		startIndex + visibleCards
 	);
 
-	// If the slice wraps around, include items from the beginning of the list
 	if (displayedPersons.length < visibleCards) {
 		displayedPersons.push(
 			...persons.slice(0, visibleCards - displayedPersons.length)
