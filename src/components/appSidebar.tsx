@@ -7,15 +7,18 @@ import {
 	MdAccountBalanceWallet,
 	MdOutlineDesignServices,
 } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const AppSidebar = () => {
 	return (
 		<div className="sidebar h-screen px-4 pt-8  border-r-[1px] border-LightGrayishBlue flex flex-col items-center">
+			{" "}
 			<div className="w-[180px]">
-				<img
-					className="w-full h-full"
-					src="/logo.svg"></img>
+				<Link to={"/"}>
+					<img
+						className="w-full h-full"
+						src="/logo.svg"></img>
+				</Link>
 			</div>
 			<div className="flex flex-col gap-2 mt-8 *:text-GrayishBlue *:text-[18px]">
 				<NavLink to="/app">
@@ -39,9 +42,9 @@ export const AppSidebar = () => {
 						</div>
 					)}
 				</NavLink>
-				<NavLink to="/transactions">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -60,9 +63,9 @@ export const AppSidebar = () => {
 						</div>
 					)}
 				</NavLink>
-				<NavLink to="/accounts">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -81,9 +84,9 @@ export const AppSidebar = () => {
 						</div>
 					)}
 				</NavLink>
-				<NavLink to="/investments">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3  hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -102,9 +105,9 @@ export const AppSidebar = () => {
 						</div>
 					)}
 				</NavLink>
-				<NavLink to="/credit-cards">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -123,9 +126,9 @@ export const AppSidebar = () => {
 						</div>
 					)}
 				</NavLink>
-				<NavLink to="/loans">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -145,9 +148,9 @@ export const AppSidebar = () => {
 					)}
 				</NavLink>
 
-				<NavLink to="/services">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${
@@ -167,9 +170,9 @@ export const AppSidebar = () => {
 					)}
 				</NavLink>
 
-				<NavLink to="/settings">
+				<NavLink to="/">
 					{({ isActive }) => (
-						<div className=" relative flex items-center py-3 ">
+						<div className=" relative flex items-center py-3 hover:cursor-not-allowed">
 							{" "}
 							<div
 								className={`absolute top-0 left-0  h-full w-[10px] rounded-t-full rounded-b-full -translate-x-[38px] bg-LimeGreen ${

@@ -6,12 +6,13 @@ import { BankCard } from "../components/dashboard/bankCard";
 import { creditCards as cards } from "../library/data";
 import { recentTransactions } from "../library/data";
 import { AppQuickTransfer } from "../components/dashboard/appQuickTransfer";
+import { AppBalanceHistory } from "../components/dashboard/appBalanceHistory";
 
 export default function AppHomepage() {
 	return (
 		<div className="flex flex-col w-full pt-4">
 			<AppTopbar />
-			<main className="bg-AppBackground h-full pt-6">
+			<main className="bg-AppBackground h-full pt-6 pb-6">
 				<div className="top-section flex flex-row items-center justify-evenly">
 					<div className="flex flex-col flex-[2_1_0] gap-3 px-10  max-h-[282px]">
 						<div className="flex flex-row items-center justify-between">
@@ -62,12 +63,18 @@ export default function AppHomepage() {
 						<AppExpenseStatistics />
 					</div>
 				</div>
-				<div className="bottom-section">
-					<div className="px-10 flex flex-col gap-3 flex-1 mt-3 max-w-[445px] border-2 border-DarkBlue">
+				<div className="bottom-section flex flex-row">
+					<div className="px-10 flex flex-col gap-3 flex-1 mt-3 ">
 						<h2 className="text-DarkBlue text-[22px] font-semibold ">
 							Quick Transfer
 						</h2>
 						<AppQuickTransfer />
+					</div>
+					<div className="px-10 flex flex-col gap-3 flex-[3_1_0] mt-3">
+						<h2 className="text-DarkBlue text-[22px] font-semibold ">
+							Balance History
+						</h2>
+						<AppBalanceHistory />
 					</div>
 				</div>
 			</main>

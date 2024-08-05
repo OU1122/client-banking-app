@@ -38,7 +38,7 @@ export const Nav = () => {
 			<div className="hidden md:block">
 				<Button
 					type="button"
-					link="/register">
+					link="/app">
 					Try for Free
 				</Button>
 			</div>

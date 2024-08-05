@@ -21,7 +21,11 @@ export const Hero = () => {
 						a one-stop-shop for spending, saving, budgeting, investing and
 						much more.
 					</p>
-					<Button type="button">Request Invite</Button>
+					<Button
+						type="button"
+						link="/app">
+						Try for Free
+					</Button>
 				</div>
 
 				<div className="hidden md:flex">
